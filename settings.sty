@@ -110,23 +110,9 @@
     --([xshift=-0.5pt]frame.south east)--(frame.south west);},
 }
 
-% Define the default language
-\DeclareOption*{\newcommand{\defaultlang}{}}%
-
-% Set the default language
-\ProcessOptions
-
-% Add the default language as a fallback language
-\newcommand{\mintedlanguage}{%
-  \ifx{\defaultlang}{}{}%
-  {\defaultlang}%
-}
-
 % Add the fallback language to your mintedbox command
-\newcommand{\mintedbox}[4]{%
-  \begin{tcblisting}{colback=#2!5,colframe=#2!50!black,listing only,
+\newtcblisting{mintbox}[3]{%
+    colback=#2!5,colframe=#2!50!black,listing only,
     title={\bfseries #1}, fonttitle=\bfseries,
-    listing engine=minted, minted language={#4,\mintedlanguage}}
-    #3
-  \end{tcblisting}
+    listing engine=minted, minted language=#3
 }
