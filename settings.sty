@@ -5,16 +5,21 @@
 \usepackage{anyfontsize}
 \usepackage{datetime}
 \usepackage{enumerate}
+\usepackage{fontspec}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{lmodern}
+\usepackage{minted}
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage{xeCJK}
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes.geometric}
-\setCJKmainfont{FakePearl}
-\tcbuselibrary{skins,breakable}
+\usemintedstyle{gruvbox-light}
+% \setCJKmainfont{FakePearl}
+\setmonofont{JetBrainsMonoNerdFont-Regular.ttf}
+\setCJKmainfont{jf open 粉圓 2.0}
+\tcbuselibrary{skins,breakable, minted}
 
 \newcommand{\hexcover}[5]{%
 \pagestyle{empty}
@@ -103,4 +108,25 @@
   overlay last={\draw[#1,line width=1pt]
     ([xshift=-0.5pt]frame.north east)
     --([xshift=-0.5pt]frame.south east)--(frame.south west);},
+}
+
+% Define the default language
+\DeclareOption*{\newcommand{\defaultlang}{}}%
+
+% Set the default language
+\ProcessOptions
+
+% Add the default language as a fallback language
+\newcommand{\mintedlanguage}{%
+  \ifx{\defaultlang}{}{}%
+  {\defaultlang}%
+}
+
+% Add the fallback language to your mintedbox command
+\newcommand{\mintedbox}[4]{%
+  \begin{tcblisting}{colback=#2!5,colframe=#2!50!black,listing only,
+    title={\bfseries #1}, fonttitle=\bfseries,
+    listing engine=minted, minted language={#4,\mintedlanguage}}
+    #3
+  \end{tcblisting}
 }
