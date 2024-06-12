@@ -1,3 +1,3 @@
 #!/bin/bash
 
-find . -type f -name "*.tex" -exec xelatex -interaction=nonstopmode -shell-escape -8bit -recorder {} \;
+fd -e tex -x sh -c 'cd {//} && xelatex -interaction=nonstopmode -shell-escape -8bit -recorder {/.} && cd -'
