@@ -6,13 +6,51 @@
 
 \begin{large}
 
-\section{Hello, World!}
+\section{什麼是 PYPI 模組？}
+    \begin{mintbox}{import 範例}{SpringGreen}{python}
+        % TODO: 不太確定是不是這個
+        import linebot
+    \end{mintbox}
+\section{LineBot 是什麼}
+\section{LineBot 應用}
+\section{LineBot 基礎語法}
 \begin{boxpar}{SpringGreen}{範例程式}
-    bruh
-\end{boxpar}
+首先先來看看範例
+    \begin{mintbox}{原始碼}{SpringGreen}{python} % TODO: 請更改以下程式碼，此為 AI 生成
+    from linebot import LineBot, WebhookHandler
+    from linebot.exceptions import InvalidSignatureError
+    from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
-\begin{boxpar}{SpringGreen}{dolor sit amet}
-    bruh
+    # Line Bot API credentials
+    LINE_CHANNEL_ACCESS_TOKEN = 'YOUR_CHANNEL_ACCESS_TOKEN'
+    LINE_CHANNEL_SECRET = 'YOUR_CHANNEL_SECRET'
+
+    # Create a Line Bot instance
+    bot = LineBot(LINE_CHANNEL_ACCESS_TOKEN)
+
+    # Create a WebhookHandler instance
+    handler = WebhookHandler(LINE_CHANNEL_SECRET)
+
+    # Define a function to handle incoming messages
+    @handler.add(MessageEvent, message=TextMessage)
+    def handle_message(event):
+        # Get the user's message
+        msg = event.message.text
+
+        # Respond with a "Hello World!" message
+        bot.reply_message(event.reply_token, TextSendMessage(text='Hello World!'))
+
+    # Define a function to handle invalid signature errors
+    @handler.error
+    def error_handler(error):
+        print(f'Error: {error}')
+
+    # Run the bot
+    if __name__ == '__main__':
+        import os
+        port = int(os.environ.get('PORT', 5000))
+        app.run(host='0.0.0.0', port=port)
+    \end{mintbox}
 \end{boxpar}
 
 \end{large}

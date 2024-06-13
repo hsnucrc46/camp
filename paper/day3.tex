@@ -6,14 +6,33 @@
 
 \begin{large}
 
-\section{Hello, World!}
+
+\section{OpenCV 是什麼}
+\section{OpenCV 應用}
+\section{OpenCV 基礎語法}
 \begin{boxpar}{SkyBlue}{範例程式}
-    bruh
+首先先來看看範例
+    \begin{mintbox}{原始碼}{SkyBlue}{python} % TODO: 請更改以下程式碼，此為 AI 生成
+import cv2
+
+# Create a window with the title "Hello World!"
+cv2.namedWindow("Hello World!", cv2.WINDOW_NORMAL)
+
+# Create a black image with a white text
+img = cv2.imread("black_image.jpg")  # Replace with a black image
+cv2.putText(img, "Hello World!", (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
+# Display the image in the window
+cv2.imshow("Hello World!", img)
+
+# Wait for a key press
+cv2.waitKey(0)
+
+# Close all OpenCV windows
+cv2.destroyAllWindows()
+    \end{mintbox}
 \end{boxpar}
 
-\begin{boxpar}{SkyBlue}{dolor sit amet}
-    bruh
-\end{boxpar}
 
 \end{large}
 \end{document}
