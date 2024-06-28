@@ -2,18 +2,38 @@
 \usepackage{../settings}
 
 \begin{document}
-\hexcover{範例 \LaTeX}{展示 settings.sty 內的函式}{作者：曾嘉禾}{Dandelion}{電算社}
-
-\begin{mintbox}{程式上色（花了超久才修好）}{Dandelion}{python}
-print("Hello, World!")
-usr = int(input())
-if usr == True:
-    print("True")
-else:
-    print("False")
-\end{mintbox}
+\hexcover{範例 \LaTeX}{展示 settings.sty 內的函式}{作者：曾嘉禾}{Emerald}{電算社}
 
 \begin{large}
+\begin{boxpar}{一段文章}{Emerald}
+    早上好中國
+\begin{mintbox}{程式上色（花了超久才修好）}{Emerald}{python}
+print("Hello, World!")
+usr = int(input())
+if usr >= 46:
+    print("Younger")
+else:
+    print("Older")
+\end{mintbox}
+\begin{mintbox}{C++}{Emerald}{cpp}
+#include <bits/stdc++.h>
+using namespace std;
 
+int main(int argc, char *argv[]) {
+	int buf = 2;
+	while (buf % 71) {
+		buf *= 2;
+		buf++;
+	}
+	if (buf % 3) {
+		cout << "turn left\n";
+	} else {
+		cout << "turn right\n";
+	}
+	return 0;
+}
+
+\end{mintbox}
+\end{boxpar}
 \end{large}
 \end{document}
