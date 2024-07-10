@@ -5,8 +5,8 @@
 \hexcover{範例 \LaTeX}{展示 settings.sty 內的函式}{作者：曾嘉禾}{Emerald}{電算社}
 
 \begin{large}
-\begin{boxpar}{一段文章}{Emerald}
-    早上好中國
+\begin{boxpar}{Emerald}{一段文章}
+早上好中國
 \begin{mintbox}{程式上色（花了超久才修好）}{Emerald}{python}
 print("Hello, World!")
 usr = int(input())
@@ -35,5 +35,26 @@ int main(int argc, char *argv[]) {
 
 \end{mintbox}
 \end{boxpar}
+\begin{tcolorbox}[title=多選題,colback=Emerald!5!white,colframe=Emerald!75!black]
+
+下列哪一個有關世界情勢的說明何者政確？\\
+
+\begin{enumerate}[(A)]
+    \item 日本是最大產油國
+    \item 地球是方的
+    \item 美國民主外送很民主
+    \item 地球是平的
+    \item 中華民國已經拿回秋海棠
+\end{enumerate}
+
+\subsection*{簡答}
+答案：(A)、(C)、(E)\\
+
+\subsection*{詳解}
+
+(B)錯誤原因：因為 D 是錯的\\
+(D)錯誤原因：因為 B 是錯的\\
+\end{tcolorbox}
 \end{large}
+來源: \href{https://github.com/hsnucrc46/camp}{camp}
 \end{document}

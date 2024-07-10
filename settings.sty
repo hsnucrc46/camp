@@ -89,10 +89,9 @@
 \newtcolorbox[blend into=figures]{imgbox}[2][]{float=htb,capture=hbox,
 blend before title code={\fbox{##1}\ },title={#2},every float=\centering,#1}
 
-\newtcolorbox{boxpar}[3]{%
+\newtcolorbox{boxpar}[2]{%
   empty,
   title=#2,
-  subtitle=#3,
   attach boxed title to top left,
   boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
     overlay={\draw[#1,line width=2pt]
