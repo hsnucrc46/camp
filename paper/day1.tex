@@ -13,20 +13,16 @@
         \source{--- 維基百科}
     \end{quote}
     這有點無聊，再試一次吧。Python 是一種用來讓你看似與電影裡的主角一般，正在看著黑黑的畫面寫出能
-    DDoS ㄈㄅㄌ（FBI）網站的電神，但實際上你只是利用簡單的程式知識而已。
+    DDoS FBI 官網的電神，但實際上你只是利用簡單的程式知識罷了。
 
     \subsection{編譯 vs 直譯}
     \begin{tabular}{|c|c|c|}
 \hline
 & 編譯（Compile） & 直譯（Interpret） \\
-\hline
 程式語言例子 & C++ & Python \\
-\hline
         執行過程 & 將原始碼轉換為二進位執行檔（binary），然後執行 &
         將原始碼逐行翻譯成二進位後執行 \\
-\hline
 執行速度 & 快 & 慢 \\
-\hline
 錯誤檢查 & 編譯時檢查錯誤 & 執行時檢查錯誤 \\
 \hline
 \end{tabular}
@@ -44,30 +40,34 @@ print("Hello, World!")
 \end{mintbox}
 
 \begin{boxpar}{Dandelion}{先了解程式的意思吧}
-    你可能之前就有聽說過，但在 python 內 print 不是指列印，而是指在螢幕上顯示出你所指定的某些文字
+    你可能之前就有聽說過，但在 python 內 print
+    不是指列印，而是指在螢幕上顯示出你所指定的某些文字
 \end{boxpar}
 \section{資料型態}
-begin{tcolorbox}[title=多選題,colback=Emerald!5!white,colframe=Emerald!75!black]
+\begin{colbox}{Dandelion}{Python 資料型態表格}
+\begin{table}[]
+\begin{tabular}{lccc}
+    \hline
+\multicolumn{1}{c}{資料型態} & 中文名稱 & 英文名稱      & Bytes  \\
+\hline
+int                      & 整數   & integer   & 4      \\
+str                      & 字串   & string    & 依照字串長度 \\
+char                     & 字元   & character & 1      \\
+float                    & 浮點數 & float     & 8 \\
+bool                     & 布林   & boolean   & 1 \\
+list                     & 列表   & list      & 依照列表長度 \\
+\hline
+\end{tabular}
+\end{table}
+\end{colbox}
+\begin{boxpar}{Dandelion}{變數與常數}
+    在電腦中要如何儲存資料到記憶體呢？就像搬家一樣，儲存資料需要有容器裝著才好分類管理，所以變數與常數就是資料的容器，隨時都可以拿出來取用。
+    \begin{itemize}
+       \item \textbf{變數：}在執行過程中可以改變內容物的容器
+       \item \textbf{常數：}一旦存進容器後只能聰當標本，在執行中無法更改（例如 π）
+    \end{itemize}
+\end{boxpar}
 
-下列哪一個有關世界情勢的說明何者政確？\\
-
-\begin{enumerate}[I]
-    \item `int`
-    \item 地球是方的
-    \item 美國民主外送很民主
-    \item 地球是平的
-    \item 中華民國已經拿回秋海棠
-\end{enumerate}
-
-\subsection*{簡答}
-答案：(A)、(C)、(E)\\
-
-\subsection*{詳解}
-
-(B)錯誤原因：因為 D 是錯的\\
-(D)錯誤原因：因為 B 是錯的\\
-\end{tcolorbox}
-\section{變數}
 %\end{olivertzeng}
 
 %\begin{hi}
