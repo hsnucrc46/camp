@@ -1,23 +1,29 @@
-# Python 是什麼
+# python 是什麼
 
 ## 簡單來說，一種程式語言。
 
 ---
-
 
 ### 編譯 vs 直譯
 
 
 |  | 編譯 (Compile) | 直譯 (Interpret) |
 | --- | --- | ------ |
-| 程式語言例子 | C++ | Python |
+| 程式語言例子 | C++ | python |
 | 執行過程 | 將原始碼轉換為二進位執行檔（binary），然後執行 | 將原始碼逐行翻譯成二進位後執行 |
 | 執行速度 | 快 | 慢 |
 | 錯誤檢查 | 編譯時檢查錯誤 | 執行時檢查錯誤 |
 
 ---
 
-# Python 基礎語法
+### python 歷史
+
+![吉多·范羅蘇姆](https://gvanrossum.github.io/images/guido-headshot-2019.jpg)
+👆吉多·范羅蘇姆
+
+---
+
+# python 基礎語法
 
 ---
 
