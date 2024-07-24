@@ -26,7 +26,7 @@ python 是由荷蘭程式設計師吉多·范羅蘇姆於 1989 年聖誕節推�
 
 ---
 
-# python 基礎語法
+# 基礎 python
 
 
 ### Hello, World!
@@ -36,7 +36,7 @@ python 是由荷蘭程式設計師吉多·范羅蘇姆於 1989 年聖誕節推�
 print("Hello, World!")
 ```
 
-這個程式會在螢幕中顯示 Hello, World! 的文字！
+這行程式會在螢幕中顯示 Hello, World! 的文字！
 
 ### input()
 
@@ -45,7 +45,7 @@ print("Hello, World!")
 ```python
 var = input()
 ```
-這個程式會將使用者輸入儲存在 `var` 變數內。
+這行程式會將使用者輸入儲存在 `var` 變數內。
 註：如果要儲存數字記得轉換資料型態
 
 ### 資料型態
